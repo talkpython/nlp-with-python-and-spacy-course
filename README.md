@@ -4,7 +4,7 @@ This repository is part of a course over on Talk Python Training.
 
 ## Transcript Files
 
-The `transcripts` folder in this repository contains the transcript files that we use during the course. These are transcripts from the Talk Python to Me podcast and are used to demonstrate how to work with text data in Python. In particular, we will use spaCy to process the text to find Python based programming tools. 
+The `transcripts` folder in this repository contains the transcript files that we use during the course. These are transcripts from the [Talk Python to Me podcast](https://talkpython.fm/) and are used to demonstrate how to work with text data in Python. In particular, we will use spaCy to process the text to find Python based programming tools. 
 
 The local folder contains a subset of all the files in the [talk python transcripts](https://github.com/mikeckennedy/talk-python-transcripts) repository, which is updated regularily. If you want to use the most recent files from the podcast you'd need to use those files to update the local transcripts folder. 
 
