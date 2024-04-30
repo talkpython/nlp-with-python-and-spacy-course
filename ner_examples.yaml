@@ -1,0 +1,11 @@
+- text: "You can't get a great chocolate flavor with carob."
+  entities:
+    INGEDIENT: ['carob']
+    DISH: []
+    EQUIPMENT: []
+    
+- text: "You can probably sand-blast it if it's an anodized aluminum pan."
+  entities:
+    INGEDIENT: []
+    DISH: []
+    EQUIPMENT: ['anodized aluminum pan']

@@ -1,0 +1,81 @@
+title: "Detecting techtools from the Python Bytes podcast."
+description: "This project contain a demo of a spaCy pipeline to detect programming tools and Python packages from podcast transcripts."
+
+vars:
+  name: "pytechtools"
+  version: "0.0.0"
+
+directories: ["artifacts", "configs", "data", "scripts", "trained", "packages"]
+
+workflows:
+  all:
+    - convert
+    - config
+    - train
+    - package
+
+commands:
+  - name: "index"
+    help: "Index the raw data so that a Prodigy recipe can easily search through it."
+    script:
+      - "python -m prodigy lunr.text.index data/lines.jsonl artifacts/index.gz.json"
+    deps:
+      - "data/lines.jsonl"
+    outputs:
+      - "artifacts/index.gz.json"
+
+  - name: "annot-search"
+    help: "Use a searching trick to annotate"
+    script:
+      - "python -m prodigy ner.lunr.manual talk-python-ner blank:en data/lines.jsonl artifacts/index.gz.json --query click --allow-reset --labels techtool"
+    deps:
+      - "artifacts/index.gz.json"
+
+  - name: "annot-model"
+    help: "Use a model trick to annotate"
+    script:
+      - "python -m prodigy ner.correct talk-python-ner trained/model-best/ data/lines.jsonl --label techtool"
+    deps:
+      - "trained/model-best"
+
+  - name: "annot-export"
+    help: "Get annotations out of Prodigy"
+    script:
+      - "python -m prodigy db-out talk-python-ner"
+
+  - name: "convert"
+    help: "Convert annotations to spaCy format."
+    script:
+      - "python scripts/convert.py en data/annots.jsonl data/train.spacy data/valid.spacy"
+    deps:
+      - "data/annots.jsonl"
+    outputs:
+      - "data/train.spacy"
+      - "data/valid.spacy"
+  
+  - name: "config"
+    help: "Create a configuration file for training."
+    script:
+      - "python -m spacy init config configs/base.cfg --pipeline ner --optimize efficiency --lang en --force"
+    outputs:
+      - "configs/base.cfg"
+
+  - name: "train"
+    help: "Train a named entity recognition model"
+    script:
+      - "python -m spacy train configs/base.cfg --paths.train data/train.spacy --paths.dev data/valid.spacy --training.max_steps 2000 --output trained"
+    deps:
+      - "configs/base.cfg"
+      - "data/train.spacy"
+      - "data/valid.spacy"
+    outputs:
+      - "trained/model-best"
+
+  - name: "package"
+    help: "Package the trained model so it can be installed"
+    script:
+      - "python -m spacy package trained/model-last packages --name ${vars.name} --version ${vars.version} --force"
+    deps:
+      - "trained/model-best"
+    outputs_no_cache:
+      - "packages/en_${vars.name}-${vars.version}/dist/en_${vars.name}-${vars.version}.tar.gz"

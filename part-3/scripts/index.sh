@@ -1,0 +1,1 @@
+python -m prodigy lunr.text.index data/lines.jsonl artifacts/index.gz.json
