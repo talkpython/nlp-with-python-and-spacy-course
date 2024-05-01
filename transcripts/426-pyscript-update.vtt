@@ -949,7 +949,7 @@ but also super nice build up of how you got to places like now with Emscripten
 
 
 00:13:00.420 --> 00:13:05.760
-and WebAssembly and how do you take C code like C Python and run it on top
+and WebAssembly and how do you take C code like CPython and run it on top
 
 
 00:13:05.760 --> 00:13:07.760
@@ -4125,7 +4125,7 @@ So in those scenarios, it makes tons of sense to say,
 
 
 00:54:53.780 --> 00:54:56.580
-we're going to use PyScript to host fast API,
+we're going to use PyScript to host FastAPI,
 
 
 00:54:56.580 --> 00:54:58.420

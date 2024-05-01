@@ -314,7 +314,7 @@
 
 00:48:22 Yeah. But still, it certainly expands what's possible larger than maybe the first impressions.
 
-00:48:27 I was going to say a quick shout out recently added a Jupyter Light example tutorial to the Xarray homepage at Xarray.dev. So if folks want to go try out X array really quick without having to start up a Jupiter lab server or something, it's there and you can run through.
+00:48:27 I was going to say a quick shout out recently added a Jupyter Light example tutorial to the Xarray homepage at Xarray.dev. So if folks want to go try out X array really quick without having to start up a JupyterLab server or something, it's there and you can run through.
 
 00:48:44 Oh, that's fantastic.
 
@@ -330,7 +330,7 @@
 
 00:49:11 Okay. I use Atom and I feel like I'm behind the times, but that's what I use.
 
-00:49:16 That's like OG VS code.
+00:49:16 That's like OG VS Code.
 
 00:49:18 I guess what I need to do Don, but I feel like I'm missing out on things, so I probably need to upgrade. I do feel like my development environment is increasingly owned by Microsoft, so I have some mild reluctance to switch to Vs code.
 

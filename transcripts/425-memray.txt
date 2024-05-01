@@ -30,7 +30,7 @@
 
 00:01:37 And it's brought to you by InfluxDB. InfluxDB is the database purpose built for handling time series data at a massive scale for real-time analytics. Try them for free at talkpython.fm/influxdb.
 
-00:01:50 Hey all, before we dive into the interview, I want to take just a moment and tell you about our latest course over at talk Python, MongoDB with async Python. This course is a comprehensive and modernized approach to MongoDB for Python developers. We use beanie, Pydantic, async and await, as well as fast API to explore how you write apps for MongoDB and even test them with locusts for load testing. In just today, yes, exactly today, the last of these frameworks were upgraded to use the newer, much faster Pydantic 2.0. I think it's a great course that that you'll enjoy. So visit talkpython.fm/async-MongoDB to learn more. And if you have a recent full course bundle, this one's already available in your library of courses. Thanks for supporting this podcast by taking and recommending our courses.
+00:01:50 Hey all, before we dive into the interview, I want to take just a moment and tell you about our latest course over at talk Python, MongoDB with async Python. This course is a comprehensive and modernized approach to MongoDB for Python developers. We use beanie, Pydantic, async and await, as well as FastAPI to explore how you write apps for MongoDB and even test them with locusts for load testing. In just today, yes, exactly today, the last of these frameworks were upgraded to use the newer, much faster Pydantic 2.0. I think it's a great course that that you'll enjoy. So visit talkpython.fm/async-MongoDB to learn more. And if you have a recent full course bundle, this one's already available in your library of courses. Thanks for supporting this podcast by taking and recommending our courses.
 
 00:02:39 Hey, guys. Hey, Pablo, Matt, welcome back to Talk Python to me. It hasn't been that long since you've been here. Has it?
 
@@ -72,7 +72,7 @@
 
 00:04:05 Maybe they are not as exciting as 3.11, but there is a bunch of interesting things there.
 
-00:04:10 And you know, there is the work of the Faster C Python team.
+00:04:10 And you know, there is the work of the Faster CPython team.
 
 00:04:14 We have a huge change in the parser, tokenizer because we are getting f strings even better and that has a huge amount of changes everywhere even if you don't think a lot about that but having this tested is quite important as you can think so so far we really really want everyone to test this this release so everyone that is listening to the live version of the podcast can go to python.org for the latest pre-release that is python 3.12 beta 3 and tell us what's broken hopefully it's It's not my fault.
 
@@ -154,7 +154,7 @@
 
 00:06:47 We have C profile and profile.
 
-00:06:49 Do I use C profile to profile C Python and profile for other things or what's going on here guys?
+00:06:49 Do I use C profile to profile CPython and profile for other things or what's going on here guys?
 
 00:06:55 - That's already.
 
@@ -1022,7 +1022,7 @@
 
 00:48:28 But I don't think this is like in the language.
 
-00:48:29 I think this is just in C Python.
+00:48:29 I think this is just in CPython.
 
 00:48:31 - Sure, okay, excellent.
 

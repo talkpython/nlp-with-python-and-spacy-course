@@ -18,7 +18,7 @@
 
 00:01:07 We've started streaming most of our episodes live on YouTube.
 
-00:01:10 Subscribe to our YouTube channel over at talkpython.fm slash YouTube to get notified about upcoming shows and be part of that episode.
+00:01:10 Subscribe to our YouTube channel over at talkpython.fm/youtube to get notified about upcoming shows and be part of that episode.
 
 00:01:18 This episode is brought to you by IRL, an original podcast from Mozilla.
 
@@ -230,7 +230,7 @@
 
 00:08:41 There's also this new variant, and then you can install packages there.
 
-00:08:45 So for example, with the fast API you just showed, you could use pip to install it, given that you have the right Python version.
+00:08:45 So for example, with the FastAPI you just showed, you could use pip to install it, given that you have the right Python version.
 
 00:08:52 Yeah, wow, this already shows right now, since this is already the next category, right?
 
@@ -458,11 +458,11 @@
 
 00:25:05 It's also worth pointing out there are some tools that you just didn't really evaluate, because you didn't quite necessarily see that they fit totally in the picture like pip-tools, which I'm a big fan of actually.
 
-00:25:15 But also Mike, either out there asked, was PyENV-VirtualENV evaluated as well?
+00:25:15 But also Mike, either out there asked, was pyenv-virtualenv evaluated as well?
 
 00:25:21 No, it wasn't. I should write that down. I will do that right now.
 
-00:25:25 I can guess, but I have no experience with PyENV-VirtualENV.
+00:25:25 I can guess, but I have no experience with pyenv-virtualenv.
 
 00:25:29 Me neither.
 
@@ -614,7 +614,7 @@
 
 00:36:17 It also though, it does follow some of the best practices, right? So it says the package mypy in the version of it, rather than just mypy == 1.5.1, it'll have things like, and here's the hash of that, which is, you know, a recommendation to store that.
 
-00:36:34 But in addition to just saying, here's the hash for my particular install, it has it, here it is for Mac OS, here it is for this other version of Mac, here it is for Linux, here it is for the ARM version of Windows, or the AMD version of Windows, right? And on and on.
+00:36:34 But in addition to just saying, here's the hash for my particular install, it has it, here it is for macOS, here it is for this other version of Mac, here it is for Linux, here it is for the ARM version of Windows, or the AMD version of Windows, right? And on and on.
 
 00:36:48 So it does record a lot of information there. But the main goal of just saying, in a year, if I go pip install or poetry update, or what, I don't remember the poetry command. There's so many, I've read all of the different CLIs for all of them.
 
@@ -740,7 +740,7 @@
 
 00:48:21 You do give a mention to pip tools here at the end. If you go the requirements.txt file way, which actually, honestly, the thing I'm using these days is pip tools. It lets you create a file and then it creates this requirement, kind of like pip freeze. It creates this requirements.txt, but it also lets you evolve that over time.
 
-00:48:40 Like you can say, I want to upgrade my thing. So if I'm using fast API and I say pip install dash dash upgrade fast API, it'll upgrade fast API, but not the things like starlet that fast API uses. Right. And that's another reason to not do that more manual process that we were just talking about.
+00:48:40 Like you can say, I want to upgrade my thing. So if I'm using FastAPI and I say pip install dash dash upgrade FastAPI, it'll upgrade FastAPI, but not the things like starlet that FastAPI uses. Right. And that's another reason to not do that more manual process that we were just talking about.
 
 00:48:58 Cause it, how do you make sure you update all of the things in a coherent way? Right. That's very, very tricky. So you can still do it, but you, I, even if you do that, I think you got to use something like pip tools or some other higher order, higher order thing there.
 
